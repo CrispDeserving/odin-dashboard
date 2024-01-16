@@ -4,9 +4,85 @@
 	box-sizing: border-box;
 }
 
-div {
-	padding: 2rem 0;
-	font-size: 2rem;
-	text-align: center;
-	font-family: sans-serif;
+ul {
+	list-style-type: none;
+}
+
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 100%;
+	grid-template-areas: "sidebar main";
+}
+
+.sidebar {
+	grid-area: sidebar;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 2ch;
+	background-color: lightblue;
+}
+
+.sidebar .logo-text {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	width: auto;
+	margin: 0 1rem;
+}
+
+.sidebar .logo-text .logo {
+	display: grid;
+	place-content: center;
+	width: 2.5rem;
+	aspect-ratio: 1;
+	border: 1px solid black;
+}
+
+.sidebar .logo-text .text {
+	font-size: 1.5rem;
+}
+
+.sidebar ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5ch;
+}
+
+.sidebar li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: auto;
+	margin: 0 1rem;
+}
+
+.sidebar li .icon {
+	display: grid;
+	place-content: center;
+	width: 2rem;
+	aspect-ratio: 1;
+	border: 1px solid black;
+}
+
+.main {
+	display: grid;
+	grid-area: main;
+}
+
+.main .headers-container {
+	grid-area: 1 / 1 / span 1 / -1;
+	padding: 2ch;
+}
+
+.main main {
+	grid-area: 2 / 1 / span 1 / -1;
+	padding: 2ch;
 }
