@@ -1,6 +1,6 @@
 :root {
 	--white: #f9f9f9;
-	--gray: #e3e3e3;
+	--gray: #e5e7eb;
 	--blue: #3b82f6;
 	--main-border-radius: 1ch;
 }
@@ -53,13 +53,13 @@ h2 {
 
 body {
 	display: grid;
-	width: 100vw;
-	height: 100vh;
+	min-width: 100vw;
+	min-height: 100vh;
 }
 
 .container {
 	display: grid;
-	grid-template-columns: 4fr 15fr;
+	grid-template-columns: 3fr 15fr;
 	grid-template-rows: auto 1fr;
 	grid-template-areas:
 		"sidebar headers-container"
