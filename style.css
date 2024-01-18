@@ -23,7 +23,7 @@ hr {
 h1,
 h2,
 h3 {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 h1 {
@@ -59,7 +59,7 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 5fr;
+	grid-template-columns: 4fr 15fr;
 	grid-template-rows: auto 1fr;
 	grid-template-areas:
 		"sidebar headers-container"
@@ -103,7 +103,7 @@ body {
 .sidebar ul {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 1.25rem;
 }
 
 .sidebar li {
@@ -123,10 +123,10 @@ body {
 	grid-area: headers-container;
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 1ch;
 	padding: 2ch 3rem 1.5rem 3rem;
 	background-color: var(--white);
-	box-shadow: 0 0.5ch 0.5ch 0 rgba(163,163,163,1);
+	box-shadow: 0 0.5ch 0.5ch 0 rgba(200,200,200,1);
 }
 
 .headers-container .nav-header {
@@ -221,14 +221,22 @@ main {
 	gap: 2rem 3rem;
 	padding: 2rem;
 	padding-bottom: 4rem;
-	/* padding: 2rem 1rem 4rem 1rem; */
 }
+
+main p {
+	color: #6b7280;
+}
+
+main .articles,
+main .trending .projects {
+	box-shadow: 0 0.5ch 0.5ch 0 rgba(200,200,200,1);
+} 
 
 main .projects {
 	grid-area: projects;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 .projects .project-cards {
@@ -239,10 +247,15 @@ main .projects {
 	gap: 2rem;
 }
 
+.project-cards .project-card-wrapper {
+	display: grid;
+	filter: drop-shadow(0px 0.5ch 0.5ch rgba(200,200,200,1));
+}
+
 .project-cards .project-card {
 	display: grid;
 	grid-auto-flow: column;
-	grid-template-columns: 1ch 1fr;
+	grid-template-columns: 0.75ch 1fr;
 	clip-path: inset(0% 0% 0% 0% round 1ch);
 }
 
@@ -255,7 +268,7 @@ main .projects {
 .project-card .wrapper {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	gap: 1ch;
+	gap: 0.5ch;
 	padding: 2rem;
 	background-color: var(--white);
 }
@@ -270,29 +283,48 @@ main .announcements {
 	grid-area: announcements;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 main .articles {
 	flex: 1;
 	background-color: var(--white);
-	padding: 2rem;
+	padding: 2.25rem;
 	display: grid;
 	justify-content: center;
+	gap: 1ch;
 	border-radius: var(--main-border-radius);
 }
 
+.announcements .articles .article {
+	display: grid;
+	gap: 0.125ch;
+}
+
+.announcements .article .title {
+	display: grid;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.announcements .article .slug {
+	font-size: 0.75rem;
+}
+
 main .trending {
+	height: 100%;
 	grid-area: trending;
-	flex: 1;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 .trending .projects {
 	display: flex;
+	flex: 1;
 	flex-direction: column;
+	justify-content: space-between;
 	gap: 1rem;
 	padding: 2rem;
 	background-color: var(--white);
@@ -311,5 +343,5 @@ main .trending {
 .project-summary .project-info {
 	display: flex;
 	flex-direction: column;
-	gap: 0.5ch;
+	gap: 0.15ch;
 }
