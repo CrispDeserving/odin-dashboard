@@ -26,8 +26,13 @@ h3 {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 1.75rem;
 }
+
+h2 {
+	font-size: 1.25rem;
+}
+
 
 .icon {
 	display: grid;
@@ -69,6 +74,7 @@ body {
 .sidebar .logo-text {
 	display: flex;
 	width: auto;
+	align-self: center;
 	gap: 1rem;
 }
 
@@ -82,6 +88,7 @@ body {
 
 .logo-text .text {
 	display: grid;
+	place-content: center;
 }
 
 .sidebar ul {
