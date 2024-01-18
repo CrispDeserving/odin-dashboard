@@ -124,7 +124,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
-	padding: 2ch 2.5rem 1.5rem 2.5rem;
+	padding: 2ch 3rem 1.5rem 3rem;
 	background-color: var(--white);
 	box-shadow: 0 0.5ch 0.5ch 0 rgba(163,163,163,1);
 }
@@ -166,12 +166,14 @@ body {
 	gap: 2rem;
 }
 
-.profile-header .greeting {
-	display: grid;
-	place-content: center;
+.profile-header .profile-title {
+	background-color: inherit;
+	display: flex;
+	flex: 1;
+	gap: 1rem;
 }
 
-.profile-header .big-profile-picture {
+.profile-title .big-profile-picture {
 	display: grid;
 	place-content: center;
 	border-radius: 100vh;
@@ -180,11 +182,15 @@ body {
 	aspect-ratio: 1;
 }
 
-.profile-header .profile-title {
-	background-color: inherit;
-	display: flex;
-	flex: 1;
-	gap: 1rem;
+.profile-title .greeting {
+	display: grid;
+	place-content: center;
+	gap: 0.5ch;
+}
+
+.greeting .greet {
+	font-size: 0.9rem;
+	font-weight: 600;
 }
 
 .profile-options {
