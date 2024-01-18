@@ -41,6 +41,14 @@ h2 {
 	aspect-ratio: 1;
 }
 
+.profile-picture {
+	display: grid;
+	place-content: center;
+	width: 3.25rem;
+	aspect-ratio: 1;
+	border: 1px solid black;
+	border-radius: 50%;
+}
 
 body {
 	display: grid;
@@ -280,12 +288,7 @@ main .trending {
 }
 
 .project-summary .profile-picture {
-	display: grid;
-	place-content: center;
-	width: 4rem;
-	margin-right: 1rem;
-	border: 1px solid black;
-	aspect-ratio: 1;
+	margin-right: 1.25rem;
 }
 
 .project-summary .project-info {
