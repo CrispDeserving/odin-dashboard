@@ -1,5 +1,6 @@
 :root {
 	--white: #f9f9f9;
+	--gray: #e3e3e3;
 	--blue: #3b82f6;
 	--main-border-radius: 1ch;
 }
@@ -130,6 +131,7 @@ body {
 
 .headers-container .nav-header {
 	display: flex;
+	align-items: center;
 	gap: 2rem;
 }
 
@@ -137,14 +139,17 @@ body {
 	display: flex;
 	gap: 1rem;
 	flex: 1;
-	margin-right: 3rem;
+	margin-right: 5rem;
+	height: auto;
 }
 
 .search-bar input[type="search"] {
 	flex: 1;
 	padding: 1ch 1rem;
-	border-radius: calc(1rem / 2 + 1ch);
-	border: 1px solid black;
+	border-radius: 100vh;
+	background-color: var(--gray);
+	border: none;
+	font-size: 1rem;
 }
 
 .nav-header .profile-summary {
@@ -193,7 +198,7 @@ body {
 }
 
 main {
-	background-color: #e3e3e3;
+	background-color: var(--gray);
 	display: grid;
 	grid-area: main;
 	grid-template-columns: 2fr 1fr;
